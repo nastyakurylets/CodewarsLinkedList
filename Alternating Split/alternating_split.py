@@ -1,14 +1,26 @@
+"""
+Alternating sptit script.
+"""
 class Node(object):
+    """
+    Node class.
+    """
     def __init__(self, data=None):
         self.data = data
         self.next = None
 
 class Context(object):
+    """
+    Context class.
+    """
     def __init__(self, first, second):
         self.first = first
         self.second = second
 
 def alternating_split(head):
+    """
+    Take one list and divide up its nodes to make two smaller lists.
+    """
     if head is None or head.next is None:
         raise AttributeError
     first_head = Node(head.data)
